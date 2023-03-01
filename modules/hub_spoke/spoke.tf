@@ -8,7 +8,7 @@ resource "azurerm_virtual_network" "vnet_spoke" {
 }
 
 resource "azurerm_subnet" "subnet_spoke" {
-  name                 = var.subnet_spoke_name
+  name                 = var.snet_spoke_name
   resource_group_name  = var.rg_name
   virtual_network_name = var.vnet_spoke_name
   address_prefixes     = var.address_space_snet_spoke
@@ -17,7 +17,7 @@ resource "azurerm_subnet" "subnet_spoke" {
 
 resource "azurerm_network_security_group" "snet_spoke_nsg" {
   count               = var.nsg ? 1 : 0
-  name                = "nsg-${var.vnet_spoke_name}-${azurerm_subnet.subnet.name}"
+  name                = "nsg-${var.vnet_spoke_name}-${azurerm_subnet.subnet_spoke.name}"
   location            = var.location
   resource_group_name = var.rg_name
 }
