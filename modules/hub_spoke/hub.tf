@@ -30,10 +30,10 @@ resource "azurerm_subnet_network_security_group_association" "snet_hub_nsg_assoc
 }
 
 resource "azurerm_virtual_network_peering" "main" {
-    name                      = "peering-${azurerm_virtual_network.vnet_hub.name}-${azurerm_virtual_network.vnet_spoke.name}"
-    resource_group_name       = var.rg_name
-    virtual_network_name      = azurerm_virtual_network.vnet_hub.name
-    remote_virtual_network_id = azurerm_virtual_network.vnet_spoke.id
-    allow_gateway_transit     = true
-    use_remote_gateways       = false
+  name                      = "peering-${azurerm_virtual_network.vnet_hub.name}-${azurerm_virtual_network.vnet_spoke.name}"
+  resource_group_name       = var.rg_name
+  virtual_network_name      = azurerm_virtual_network.vnet_hub.name
+  remote_virtual_network_id = azurerm_virtual_network.vnet_spoke.id
+  allow_gateway_transit     = true
+  use_remote_gateways       = false
 }
