@@ -5,7 +5,7 @@ output "subnet_hub_name" {
 
 output "subnet_hub_id" {
   description = "Id of the Virtual Network Subnet"
-  value       = azurerm_subnet.subnet_hub_.id
+  value       = azurerm_subnet.subnet_hub.id
 }
 
 output "vnet_hub_name" {
