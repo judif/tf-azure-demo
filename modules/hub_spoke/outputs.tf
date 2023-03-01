@@ -1,19 +1,19 @@
-output "snet_01_name" {
+output "subnet_hub_name" {
   description = "Name of the Virtual Network Subnet"
-  value       = azurerm_subnet.subnet.name
+  value       = azurerm_subnet.subnet_hub.name
 }
 
-output "id" {
+output "subnet_hub_id" {
   description = "Id of the Virtual Network Subnet"
-  value       = azurerm_subnet.subnet.id
+  value       = azurerm_subnet.subnet_hub_.id
 }
 
-output "vnet_name" {
+output "vnet_hub_name" {
   description = "Name of the Virtual Network Subnet"
-  value       = azurerm_subnet.subnet.name
+  value       = azurerm_virtual_network.vnet_hub.name
 }
 
-output "id" {
+output "vnet_hub_id" {
   description = "Id of the Virtual Network Subnet"
-  value       = azurerm_subnet.subnet.id
+  value       = azurerm_virtual_network.vnet_hub.id
 }
