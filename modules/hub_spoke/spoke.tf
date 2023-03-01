@@ -24,7 +24,7 @@ resource "azurerm_network_security_group" "snet_spoke_nsg" {
 
 
 resource "azurerm_subnet_network_security_group_association" "snet_spoke_nsg_association" {
-  count                     = var.snet_spoke_nsg ? 1 : 0
+  count                     = var.nsg ? 1 : 0
   subnet_id                 = azurerm_subnet.subnet_spoke.id
   network_security_group_id = azurerm_network_security_group.snet_spoke_nsg[count.index].id
 }
