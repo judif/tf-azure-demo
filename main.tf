@@ -24,7 +24,7 @@ module "snet_hub_001_default" {
 }
 
 module "hub_spoke" {
-  source        = "./modules/subnet"
+  source        = "./modules/hub_spoke"
   rg_name       = azurerm_resource_group.main.name
   location      = azurerm_resource_group.main.location
   vnet_spoke_name = var.vnet_spoke_name
