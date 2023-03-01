@@ -34,6 +34,6 @@ resource "azurerm_virtual_network_peering" "main" {
     resource_group_name       = var.rg_name
     virtual_network_name      = azurerm_virtual_network.vnet_hub.name
     remote_virtual_network_id = azurerm_virtual_network.vnet_spoke.id
-    allow_gateway_transit     = var.allow_gateway_transit
-    use_remote_gateways       = var.use_remote_gateways
+    allow_gateway_transit     = true
+    use_remote_gateways       = true
 }
