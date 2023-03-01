@@ -24,15 +24,15 @@ module "snet_hub_001_default" {
 }
 
 module "hub_spoke" {
-  source        = "./modules/hub_spoke"
-  rg_name       = azurerm_resource_group.main.name
-  location      = azurerm_resource_group.main.location
-  vnet_spoke_name = var.vnet_spoke_name
-  vnet_hub_name = var.vnet_hub_name
-  snet_spoke_name = var.snet_spoke_name
-  snet_hub_name = var.snet_hub_name
-  address_space_vnet_hub = var.address_space_vnet_hub
-  address_space_snet_hub = var.address_space_snet_hub
+  source                   = "./modules/hub_spoke"
+  rg_name                  = azurerm_resource_group.main.name
+  location                 = azurerm_resource_group.main.location
+  vnet_spoke_name          = var.vnet_spoke_name
+  vnet_hub_name            = var.vnet_hub_name
+  snet_spoke_name          = var.snet_spoke_name
+  snet_hub_name            = var.snet_hub_name
+  address_space_vnet_hub   = var.address_space_vnet_hub
+  address_space_snet_hub   = var.address_space_snet_hub
   address_space_snet_spoke = var.address_space_snet_spoke
   address_space_vnet_spoke = var.address_space_vnet_spoke
 }
